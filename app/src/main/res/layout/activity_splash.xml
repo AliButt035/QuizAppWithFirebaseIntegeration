@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:text="My Quiz"
-        android:textColor="@color/white"
+        android:textColor="@color/colorAccent"
         android:textSize="32sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
