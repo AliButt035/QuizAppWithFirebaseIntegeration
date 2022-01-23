@@ -1,5 +1,6 @@
 package com.example.myquiz;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -45,6 +46,15 @@ public class CatGridAdapter extends BaseAdapter {
         else{
             view=convertView;
         }
+
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(parent.getContext(),SetsActivity.class);
+                intent.putExtra("CATEGORY",catList.get(position));
+                parent.getContext().startActivity(intent);
+            }
+        });
 
         ((TextView) view.findViewById(R.id.catName)).setText(catList.get(position));
         Random rnd=new Random();
