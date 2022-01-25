@@ -186,6 +186,8 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
             //go to score activity
             Intent intent=new Intent(QuestionActivity.this,ScoreActivity.class);
             intent.putExtra("SCORE",String.valueOf(score)+"/"+String.valueOf(questionList.size()));
+            //clear previous Activity on backpressing
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
             QuestionActivity.this.finish();
         }
@@ -242,5 +244,13 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
 
             }
         });
+    }
+
+    //countdown Stops on backpressing while attempting
+    // the quiz in Question Activity
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        countDown.cancel();
     }
 }
