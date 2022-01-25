@@ -48,11 +48,13 @@ public class SetsAdapter extends BaseAdapter {
 
         view.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(parent.getContext(),QuestionActivity.class);
+            public void onClick(View view) {
+                Intent intent = new Intent(parent.getContext(),QuestionActivity.class);
                 parent.getContext().startActivity(intent);
+
             }
         });
+
         ((TextView)view.findViewById(R.id.setNo_tv)).setText(String.valueOf(position+1));
         return view;
     }

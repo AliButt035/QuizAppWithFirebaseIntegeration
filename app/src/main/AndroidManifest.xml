@@ -11,7 +11,7 @@
         android:theme="@style/Theme.MyQuiz">
         <activity
             android:name=".ScoreActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".QuestionActivity"
             android:exported="false" />
