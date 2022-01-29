@@ -1,12 +1,14 @@
 package com.example.myquiz;
 
 public class Question {
+
     String question;
     String optionA;
     String optionB;
     String optionC;
     String optionD;
     int correctAns;
+
 
     public Question(String question, String optionA, String optionB, String optionC, String optionD, int correctAns) {
         this.question = question;
@@ -64,4 +66,5 @@ public class Question {
     public void setCorrectAns(int correctAns) {
         this.correctAns = correctAns;
     }
+
 }
