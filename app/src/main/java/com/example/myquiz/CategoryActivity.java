@@ -15,6 +15,7 @@ import java.util.List;
 
 public class CategoryActivity extends AppCompatActivity {
 
+
     private GridView catGrid;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
