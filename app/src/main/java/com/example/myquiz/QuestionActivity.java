@@ -117,6 +117,7 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
     }
 
 
+
     private void setQuestion()
     {
         timer.setText(String.valueOf(10));
